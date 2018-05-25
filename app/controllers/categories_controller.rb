@@ -5,6 +5,9 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all
+    # Category.find_each do |c|
+    #   c.avatar.recreate_versions! if c.avatar?
+    # end
   end
 
   # GET /categories/1
@@ -69,6 +72,6 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:description)
+      params.require(:category).permit(:description, :avatar)
     end
 end

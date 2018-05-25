@@ -6,6 +6,11 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'figaro'
+gem 'carrierwave', '~> 1.0'
+gem 'fog-aws'
+gem 'mini_magick'
+gem 'simple_form'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
