@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
-<div class="col-sm-12"><h1>Share your skills or have fun learning!</h1></div>
+<div class="col-sm-12"><h1 class="catIntro">Share your skills or have fun learning!</h1></div>
         <% @categories.each do |category| %>
       <div class="col-sm-4">
-           <div><%= category.description %></div>
+           <div style="text-align:center"><h2><%= link_to category.description, category_path(category.id) %></h2></div>
             <%= image_tag category.avatar_url %>
       </div>
         <% end %>

@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @category.description %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="row catshow">
+  <div class="col-sm-4">
+    <h1><strong><%= @category.description %></strong></h1>
+  </div>
+  <div class="col-sm-8 divImage">
+    <span class="catImage" style='margin-left:70%'><%= image_tag @category.avatar_url, class:"img-responsive" %></span>
+  </div>
+<div class="catLinks">
+  <%= link_to 'Edit', edit_category_path(@category), class:"btn btn-dark" %>
+  <%= link_to 'Back', categories_path, class:"btn btn-dark" %>
+</div>

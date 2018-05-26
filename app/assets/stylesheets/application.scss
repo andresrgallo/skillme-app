@@ -13,6 +13,40 @@
  */
 @import "bootstrap";
 
+//Categories
+//Category Index
+.catIntro{
+	text-align: center;
+}
+//Category show
+.catImage img{
+	border-radius: 25px;
+	height: 20rem;
+	display: block;
+	margin: auto;
+}
+.catLinks{
+	margin-left: 1rem;
+}
+
+
+
+//lessons views
+//new lesson
+.lessonTitle, .editTitle{
+	color: white;
+	text-align: center;
+}
+.newLesson, .editLesson {
+	background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0,0.4)), url('library.jpg');
+}
+.lessonLabels div label {
+	color: white;
+}
+.lback {
+	margin: 1rem;
+}
+
 // footer
 .footer-distributed{
 	background-color: #292c2f;
@@ -88,5 +122,7 @@
 	}
 }
 .col-sm-4 img {
-    height: 17rem;
+	border-radius: 25px;
+	height: 17rem;
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
 }

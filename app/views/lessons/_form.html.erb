@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@lesson) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+<div class="col-ddsm-6" style="margin:0 20% 0 20%">
+  <div class="form-inputs lessonLabels">
+    <%= f.association :category, label_method: :description  %>
+    <%= f.input :description %>
+    <%= f.input :content %>
+    <%= f.input :price, label: 'Price/hr Aud' %>
+  </div>
+</div>
+  <div class="form-actions" style="margin-left:20%">
+    <%= f.button :submit, class:"btn btn-dark"%>
+  </div>
+<% end %>
