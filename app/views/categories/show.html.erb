@@ -3,6 +3,24 @@
 <div class="row catshow">
   <div class="col-sm-4">
     <h1><strong><%= @category.description %></strong></h1>
+      <table class="table table-striped clessons">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Lesson</th>
+            <th scope="col">Price/hr</th>
+            <th scope="col">More info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @category.lessons.each do |lesson| %>
+          <tr>
+              <td><%= lesson.description %></td>
+              <td><%= number_to_currency(lesson.price) %></td>
+              <td><strong><%= link_to 'More Info', lesson %></strong></td>
+          </tr>
+          </tbody>
+          <% end %>
+      </table>
   </div>
   <div class="col-sm-8 divImage">
     <span class="catImage" style='margin-left:70%'><%= image_tag @category.avatar_url %></span>
