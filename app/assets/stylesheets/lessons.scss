@@ -1,0 +1,15 @@
+//lessons views
+//new lesson
+.lessonTitle, .editTitle{
+	color: white;
+	text-align: center;
+}
+.newLesson, .editLesson {
+	background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0,0.4)), url('library.jpg');
+}
+.lessonLabels div label {
+	color: white;
+}
+.lback {
+	margin: 1rem;
+}
