@@ -5,12 +5,12 @@
 
   <div class="form-inputs">
     <%= f.file_field :avatar %>
-    <%= f.input :first_name %>
+    <%= f.input :first_name, required:true, error: 'Name is mandatory, please specify one' %>
     <%= f.input :last_name %>
     <%= f.input :address %>
     <%= f.input :suburb %>
     <%= f.input :state %>
-    <%= f.input :postcode %>
+    <%= f.input :postcode, error: 'Postcode is mandatory, please specify one' %>
     <%= f.input :facebook %>
   </div>
 

@@ -17,17 +17,22 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-      </li>
+      <% if current_user.has_completed_profile? %>
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+      <% end %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <% if !user_signed_in? %>
           <a class="dropdown-item" href="/users/sign_in">Log in</a>
           <a class="dropdown-item" href="/users/sign_up">Sign up</a>
-          <a class="dropdown-item" href="/profile">Profile</a>
+        <% end %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class:'dropdown-item' %>
+          <a class="dropdown-item" href="/profile">Profile</aa>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Welcome back ...</a>
         </div>
@@ -58,8 +63,10 @@
 			<div class="footer-left">
 
 				<p class="footer-links">
+        <% if current_user.has_completed_profile? %>
 					<a class="aboutus" href="/static_pages/about">About Us</a>
 					<a href="/static_pages/contact">Contact us</a>
+        <% end %>
 				</p>
 
 				<p>Skillme &copy</p>
