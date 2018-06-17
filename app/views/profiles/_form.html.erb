@@ -12,6 +12,8 @@
     <%= f.input :state %>
     <%= f.input :postcode, error: 'Postcode is mandatory, please specify one' %>
     <%= f.input :facebook %>
+    <%= f.input :expertise %>
+    <%= f.association :qualifications, as: :check_boxes %>
   </div>
 
   <div class="form-actions">

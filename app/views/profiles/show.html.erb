@@ -36,6 +36,17 @@
   <strong>Facebook:</strong>
   <%= @profile.facebook %>
 </p>
+<p>
+  <strong>Expertise:</strong>
+  <%= @profile.expertise %>
+</p>
+<p>
+  <strong>Qualifications:</strong>
+  <% @profile.qualifications.each do |q| %>
+  <ol><%= q.name %></ol>
+</p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>

@@ -1,4 +1,5 @@
 class Profile < ApplicationRecord
+  has_and_belongs_to_many :qualifications
   belongs_to :user
   validates :first_name, presence: true, length: { minimum: 3 }
   validates :postcode, presence: true, numericality: true
